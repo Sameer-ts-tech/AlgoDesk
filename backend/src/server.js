@@ -32,7 +32,7 @@ console.log(__dirname);
         console.log("hlo");
         
         //any error for checking
-        res.sendFile(path.join(__dirname,"../frontend/dist/index.html"));
+        res.sendFile(path.join(__dirname,"./frontend/dist/index.html"));
     }) 
 //}
 
