@@ -25,13 +25,15 @@ app.get("/work",(req,res)=>{
 
 //make app ready for deployment
 
-if(ENV.NODE_ENV==="production"){
+//if(ENV.NODE_ENV==="production"){
     app.use(express.static(path.join(__dirname,"../frontend/dist")))
     app.get("/{*any}",(req,res)=>{
+        console.log("hlo");
+        
         //any error for checking
         res.sendFile(path.join(__dirname,"../frontend/dist/index.html"));
-    })
-}
+    }) 
+//}
 
 
 
