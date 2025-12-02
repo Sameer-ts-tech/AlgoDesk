@@ -1,5 +1,5 @@
 import express from "express";
-import path from "path"
+import path, { dirname } from "path"
 import cors from "cors"
 import { ENV } from "./lib/env.js";
 import { connectDB } from "./lib/db.js";
@@ -22,11 +22,12 @@ app.get("/health",(req,res)=>{
 app.get("/work",(req,res)=>{
     res.status(200).json({msg:"api is working"})
 })
+console.log(__dirname);
 
 //make app ready for deployment
 
 //if(ENV.NODE_ENV==="production"){
-    app.use(express.static(path.join(__dirname,"../frontend/dist")))
+    app.use(express.static(path.join(__dirname,"./frontend/dist")))
     app.get("/{*any}",(req,res)=>{
         console.log("hlo");
         
