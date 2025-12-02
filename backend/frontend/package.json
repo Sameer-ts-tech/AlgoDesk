@@ -12,7 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.55.0",
     "backend": "file:..",
-    "interview-platform": "file:..",
+    "interview-platform": "file:../..",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
